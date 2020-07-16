@@ -1,0 +1,221 @@
+* { 
+    margin: o;
+} 
+
+body{ 
+
+/*background: #F7DC6F;*/
+background-image: url("../img/fondo.jpg");
+background-repeat: no-repeat; /*para evitar que la imagen se repita*/
+background-position: center;/*para centrar la imagen*/
+background-size: cover;/*para llenar el ancho de la pantalla*/
+background-attachment: fixed;/*para fijar y llenar toda la pantalla*/
+
+
+} 
+
+p{ 
+    text-align: justify;
+} 
+
+ .contenedor{ 
+     width: 90%; /* centramos el ancho de la web*/
+     max-width: 1000px;
+     margin: 20px auto; /* centramos el cuerpo de la web*/
+     display:grid;
+     grid-gap: 5px;
+     grid-template-columns: repeat(3,1fr);
+     grid-template-rows: repeat(4,auto);
+
+     /* se define el orden de la estructura*/
+     grid-template-areas: "cabecera cabecera cabecera"
+                          "contenido contenido lateral"
+                          "publicidad-1 publicidad-2 publicidad-3"
+                          "footer footer footer";
+
+}
+
+.texto_interno{ 
+    background: #ABEBC6 ;
+    padding: 20px;
+    
+
+
+}
+
+.cabecera{ 
+    background:#D5D8DC;
+    color:#D5F5E3; 
+    height: 70px;
+    grid-area: cabecera;
+    padding-top: 10px;
+
+}
+
+.texto_interno{ 
+    background: #ffffff;
+    padding: 20px;
+
+    border-radius: 10px;
+
+
+}
+
+.contenido{ 
+    grid-area:contenido;
+    background: #ffffff;
+    
+
+}
+
+.lateral{
+    background:  #C39BD3;
+    grid-area:lateral;
+    border-radius: 10px;
+
+}
+
+.widget-1,.widget-2,.widget-3{
+    background: #F8C471;
+    height: 167px;
+    border-radius: 10px;
+
+}
+
+
+.widget-1{
+    grid-area:publicidad-1;
+
+}
+
+.widget-2{
+    grid-area:publicidad-2;
+
+}
+
+.widget-3{
+    grid-area:publicidad-3;
+    border-radius: 10px;
+
+}
+
+.footer{
+    background: #C39BD3;
+    grid-area:footer;
+    height: 80px;
+    border-radius: 10px;
+}
+
+/* estilos del menu*/
+.logo{
+margin-left: 30px;
+
+}
+
+.menu_bar{
+    float:right;
+    display: none;
+}
+
+header nav ul{
+    float:right;
+    list-style: none;
+    margin-right: 20px;
+}
+
+header nav ul li{
+    display: inline;
+    margin:0 7px;
+    line-height: 50px;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    font-size: 17px;
+    color: #FF0000;
+    padding:7px 12px; /* para tener un espacio a rededorr*/
+}
+
+a:active, a:hover{
+background: #0008FF;
+color:  #ffffff;
+
+
+}
+
+form input{
+    width: 80%;
+    height: 30px;
+}
+
+form .boton{
+    background: #FF0000;
+    color: #ffffff;
+    height: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 760px)
+{
+    /* este es para el comportamiento cuando tenemos dispositivos moviles*/
+    .contenedor{
+        grid-template-areas: "cabecera cabecera cabecera"
+                             "contenido contenido contenido"
+                             "lateral lateral lateral"
+                             "publcidad-1 publicidad-1 publicidad-1"
+                             "publcidad-2 publicidad-2 publicidad-2"
+                             "publcidad-3 publicidad-3 publicidad-3"
+                             "footer footer footer";
+                             
+
+    }
+
+}
+
+@media screen and (max-width:760px)
+{
+    .menu_bar{
+        display: block;
+    }
+
+    header nav ul{
+        width: 80%;
+        height: 100%;
+        background: #8491ee ;
+        position: absolute;
+        padding: 5px;
+        margin-top: 20px;
+        left: -100%;
+    }
+
+    header nav ul li{
+        display: block;
+        border-bottom: 1px solid #0008FF;
+    }
+
+    a:active,a:hover{
+        background: none;
+        color: #000000;
+    }
+
+    header label a{
+        text-decoration: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        padding-right: 1opx;
+        columns: #000000;
+
+    }
+
+
+
+
+}
